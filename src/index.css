@@ -51,7 +51,7 @@
   }
 
   .glass-pill {
-    @apply bg-primary/20 text-primary px-4 py-2 rounded-full border border-primary/20 shadow-[0_0_15px_rgba(242,202,80,0.1)];
+    @apply bg-primary/20 text-primary px-4 py-2 rounded-full border border-primary/20 shadow-[0_0_15px_rgba(242,202,80,0.1)] cursor-pointer transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .text-gradient {
@@ -59,6 +59,6 @@
   }
 
   .btn-primary {
-    @apply relative overflow-hidden bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-lg font-label uppercase tracking-widest text-[0.7rem] font-bold active:scale-95 transition-all outline outline-1 outline-transparent hover:outline-primary/50 hover:shadow-[0_0_25px_rgba(242,202,80,0.4)];
+    @apply relative overflow-hidden bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-lg font-label uppercase tracking-widest text-[0.7rem] font-bold active:scale-95 transition-all duration-300 ease-out outline outline-1 outline-transparent hover:outline-primary/50 hover:shadow-[0_0_25px_rgba(242,202,80,0.4)] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 }

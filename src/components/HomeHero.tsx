@@ -75,7 +75,7 @@ export default function HomeHero() {
                 Launch Project
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-10 py-3 border border-outline-variant/30 text-on-surface rounded-lg font-label uppercase tracking-widest text-[0.7rem] font-bold hover:bg-surface-container-high transition-all hover:scale-105 active:scale-95">
+              <button className="px-10 py-3 border border-outline-variant/30 text-on-surface rounded-lg font-label uppercase tracking-widest text-[0.7rem] font-bold hover:bg-surface-container-high hover:scale-105 active:scale-95 transition-all duration-300 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface focus-visible:ring-offset-2 focus-visible:ring-offset-background">
                 The Atelier
               </button>
             </motion.div>

@@ -100,8 +100,9 @@ function ProjectCard({ project }: { project: Project }) {
     <motion.div
       whileHover="hover"
       initial="initial"
+      tabIndex={0}
       className={cn(
-        "group relative overflow-hidden bg-surface-container rounded-2xl glass-edge w-full transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/10",
+        "group relative overflow-hidden bg-surface-container rounded-2xl glass-edge w-full transition-shadow duration-500 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background",
         isWide ? "h-[500px]" : "h-[600px]",
         project.size === 'medium' && "h-[500px]"
       )}
@@ -143,7 +144,7 @@ function ProjectCard({ project }: { project: Project }) {
             </span>
           )}
           {project.hasPlayButton ? (
-            <motion.div whileHover={{ scale: 1.1, rotate: 90 }} transition={{ type: "spring", stiffness: 300 }}>
+            <motion.div whileHover={{ scale: 1.1, rotate: 90 }} transition={{ type: "spring", stiffness: 300 }} className="cursor-pointer">
               <PlayCircle className="w-10 h-10 text-primary drop-shadow-[0_0_15px_rgba(242,202,80,0.5)]" fill="currentColor" />
             </motion.div>
           ) : (

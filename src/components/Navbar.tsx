@@ -36,23 +36,23 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/15">
-      <div className="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1920px] mx-auto">
+    <nav className="fixed top-4 left-4 right-4 lg:w-full max-w-[1400px] lg:left-1/2 lg:-translate-x-1/2 z-50 glass-nav border border-outline-variant/20 rounded-full shadow-2xl">
+      <div className="flex justify-between items-center px-6 md:px-8 py-3 w-full">
         <NavLink to="/" className="text-2xl font-bold tracking-tighter text-primary font-headline uppercase relative group overflow-hidden flex flex-col justify-center">
           <span className="block group-hover:-translate-y-full transition-transform duration-500 ease-out">Parallel Designs</span>
           <span className="absolute inset-0 translate-y-full group-hover:translate-y-0 text-secondary transition-transform duration-500 ease-out">Parallel Designs</span>
         </NavLink>
         
-        <div className="hidden md:flex items-center space-x-2 font-label uppercase tracking-widest text-[0.75rem] font-bold">
+        <div className="hidden lg:flex items-center space-x-1 font-label uppercase tracking-widest text-[0.70rem] font-bold bg-surface-container-low border border-outline-variant/10 rounded-full p-1.5 shadow-inner">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.href}
               className={({ isActive }) => cn(
-                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105",
+                "px-5 py-2.5 transition-all duration-300 rounded-full hover:text-primary",
                 isActive 
-                  ? "glass-pill scale-105" 
-                  : "text-on-surface/80"
+                  ? "bg-primary/20 text-primary border border-primary/20 shadow-md" 
+                  : "text-on-surface/70"
               )}
             >
               {link.name}
@@ -68,8 +68,8 @@ export default function Navbar() {
             <NavLink
               to="/services"
               className={({ isActive }) => cn(
-                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105 flex items-center gap-1 group",
-                isActive ? "glass-pill scale-105" : "text-on-surface/80"
+                "px-4 py-2.5 transition-all duration-300 rounded-full hover:text-primary flex items-center gap-1 group",
+                isActive ? "bg-primary/20 text-primary border border-primary/20 shadow-md" : "text-on-surface/70"
               )}
             >
               Services
@@ -91,7 +91,7 @@ export default function Navbar() {
                       <NavLink 
                         key={idx} 
                         to={getServiceRoute(service.name)}
-                        className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-container transition-colors group/item"
+                        className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-container transition-all duration-300 ease-out group/item focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-surface-container-low"
                       >
                        <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary group-hover/item:text-secondary group-hover/item:scale-110 transition-all border border-outline-variant/20">
                           <service.icon size={20} />
@@ -113,10 +113,10 @@ export default function Navbar() {
               key={link.name}
               to={link.href}
               className={({ isActive }) => cn(
-                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105",
+                "px-5 py-2.5 transition-all duration-300 rounded-full hover:text-primary",
                 isActive 
-                  ? "glass-pill scale-105" 
-                  : "text-on-surface/80"
+                  ? "bg-primary/20 text-primary border border-primary/20 shadow-md" 
+                  : "text-on-surface/70"
               )}
             >
               {link.name}
@@ -124,12 +124,12 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <NavLink to="/contact" className="hidden lg:inline-flex px-6 py-2 border border-outline-variant/30 text-on-surface rounded-full font-label uppercase tracking-widest text-[0.7rem] font-bold hover:bg-surface-container-high transition-all">
+        <div className="flex items-center gap-3">
+          <NavLink to="/contact" className="hidden lg:inline-flex px-6 py-3 text-on-surface rounded-full font-label uppercase tracking-widest text-[0.7rem] font-bold hover:text-primary transition-all">
             Client Portal
           </NavLink>
-          <NavLink to="/contact" className="btn-primary rounded-full group">
-            <span className="relative z-10">Inquire</span>
+          <NavLink to="/contact" className="btn-primary rounded-full group px-8 hidden sm:flex">
+            <span className="relative z-10 text-[0.7rem]">Get Started</span>
             <div className="absolute inset-0 bg-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </NavLink>
         </div>
