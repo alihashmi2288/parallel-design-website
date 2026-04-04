@@ -1,0 +1,139 @@
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronDown, Code, Layout, Smartphone, Globe, PenTool, Database } from 'lucide-react';
+import { cn } from '@/src/lib/utils';
+
+export default function Navbar() {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+  ];
+
+  const secondaryLinks = [
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Packages', href: '/packages' },
+  ];
+
+  const services = [
+    { name: 'Web Development', icon: Code, desc: 'High-performance React applications.' },
+    { name: 'UI/UX Design', icon: Layout, desc: 'Premium editorial designs.' },
+    { name: 'Mobile Apps', icon: Smartphone, desc: 'Native iOS and Android solutions.' },
+    { name: 'SEO Optimization', icon: Globe, desc: 'Data-driven ranking strategies.' },
+    { name: 'Brand Identity', icon: PenTool, desc: 'Logos and visual systems.' },
+    { name: 'Data Architecture', icon: Database, desc: 'Secure backend infrastructure.' },
+  ];
+
+  const getServiceRoute = (name: string) => {
+    switch(name) {
+      case 'Web Development': return '/services/web-development';
+      case 'Mobile Apps': return '/services/mobile-apps';
+      case 'SEO Optimization': return '/services/seo-optimization';
+      default: return `/services#${name.toLowerCase().replace(/[\s/]+/g, '-')}`;
+    }
+  };
+
+  return (
+    <nav className="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/15">
+      <div className="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1920px] mx-auto">
+        <NavLink to="/" className="text-2xl font-bold tracking-tighter text-primary font-headline uppercase relative group overflow-hidden flex flex-col justify-center">
+          <span className="block group-hover:-translate-y-full transition-transform duration-500 ease-out">Parallel Designs</span>
+          <span className="absolute inset-0 translate-y-full group-hover:translate-y-0 text-secondary transition-transform duration-500 ease-out">Parallel Designs</span>
+        </NavLink>
+        
+        <div className="hidden md:flex items-center space-x-2 font-label uppercase tracking-widest text-[0.75rem] font-bold">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.href}
+              className={({ isActive }) => cn(
+                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105",
+                isActive 
+                  ? "glass-pill scale-105" 
+                  : "text-on-surface/80"
+              )}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+
+          {/* Mega Menu Trigger */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <NavLink
+              to="/services"
+              className={({ isActive }) => cn(
+                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105 flex items-center gap-1 group",
+                isActive ? "glass-pill scale-105" : "text-on-surface/80"
+              )}
+            >
+              Services
+              <ChevronDown size={14} className={cn("transition-transform duration-300 group-hover:rotate-180", isServicesOpen && "rotate-180")} />
+            </NavLink>
+
+            {/* Mega Menu Dropdown */}
+            <AnimatePresence>
+              {isServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-surface-container-low rounded-2xl border border-outline-variant/30 shadow-2xl p-6 glass-nav"
+                >
+                  <div className="grid grid-cols-2 gap-4">
+                    {services.map((service, idx) => (
+                      <NavLink 
+                        key={idx} 
+                        to={getServiceRoute(service.name)}
+                        className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-container transition-colors group/item"
+                      >
+                       <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary group-hover/item:text-secondary group-hover/item:scale-110 transition-all border border-outline-variant/20">
+                          <service.icon size={20} />
+                       </div>
+                       <div>
+                         <h4 className="text-sm font-bold text-on-surface mb-1">{service.name}</h4>
+                         <p className="text-xs text-on-surface/50 font-body normal-case tracking-normal">{service.desc}</p>
+                       </div>
+                      </NavLink>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {secondaryLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.href}
+              className={({ isActive }) => cn(
+                "px-4 py-2 transition-all duration-300 rounded-full hover:bg-surface-container hover:scale-105",
+                isActive 
+                  ? "glass-pill scale-105" 
+                  : "text-on-surface/80"
+              )}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4">
+          <NavLink to="/contact" className="hidden lg:inline-flex px-6 py-2 border border-outline-variant/30 text-on-surface rounded-full font-label uppercase tracking-widest text-[0.7rem] font-bold hover:bg-surface-container-high transition-all">
+            Client Portal
+          </NavLink>
+          <NavLink to="/contact" className="btn-primary rounded-full group">
+            <span className="relative z-10">Inquire</span>
+            <div className="absolute inset-0 bg-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          </NavLink>
+        </div>
+      </div>
+    </nav>
+  );
+}
