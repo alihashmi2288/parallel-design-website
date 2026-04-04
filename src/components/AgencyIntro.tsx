@@ -24,7 +24,7 @@ export default function AgencyIntro() {
         >
           <motion.div style={{ y: imgY }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
              <img 
-               src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop"
+               src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop"
                alt="Abstract structure"
                className="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity"
              />

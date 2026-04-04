@@ -20,14 +20,14 @@ const projects: Project[] = [
     title: "Onyx & Ether",
     category: "Branding",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
     size: 'large'
   },
   {
     id: 2,
     title: "Lumina Arc",
     category: "Web Design",
-    image: "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=2564&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=1200&auto=format&fit=crop",
     size: 'large'
   },
   {
@@ -35,7 +35,7 @@ const projects: Project[] = [
     title: "Kinetic Essence",
     category: "Motion Graphics",
     description: "Exploring the intersection of industrial precision and fluid digital motion for automotive luxury.",
-    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2564&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1200&auto=format&fit=crop",
     size: 'wide',
     hasPlayButton: true
   },
@@ -43,14 +43,14 @@ const projects: Project[] = [
     id: 4,
     title: "Mono Type",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2564&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop",
     size: 'medium'
   },
   {
     id: 5,
     title: "Prism OS",
     category: "Web Platform",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2564&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop",
     size: 'medium'
   }
 ];

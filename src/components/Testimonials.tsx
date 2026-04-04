@@ -6,19 +6,19 @@ const testimonials = [
     name: "Sarah Jenkins",
     role: "CEO, TechFlow",
     content: "Parallel Designs transformed our brand from a startup to a market leader. Their attention to detail is unparalleled.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2564&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
   },
   {
     name: "Marcus Thorne",
     role: "Founder, ArchiBuild",
     content: "The website they built for us isn't just a site; it's a piece of art. Our conversion rates have tripled since launch.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2564&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1200&auto=format&fit=crop"
   },
   {
     name: "Elena Rodriguez",
     role: "Marketing Director, Vibe",
     content: "Working with them was a seamless experience. They understood our vision perfectly and executed it flawlessly.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2564&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop"
   }
 ];
 

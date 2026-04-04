@@ -51,7 +51,7 @@ export default function WebDevelopmentPage() {
         </motion.div>
         <motion.div {...fadeInUp} className="relative glass-edge rounded-2xl overflow-hidden p-8 bg-surface-container/50 hover:bg-surface-container transition-colors flex justify-center items-center">
            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" 
               alt="Laptop Code" 
               className="w-full max-w-[500px] h-auto object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
@@ -63,7 +63,7 @@ export default function WebDevelopmentPage() {
       <section className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-32 bg-surface-container-low p-12 rounded-3xl glass-edge">
         <motion.div {...fadeInUp} className="order-2 md:order-1 relative overflow-hidden rounded-2xl h-[500px]">
            <img 
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop" 
               alt="Professional Woman" 
               className="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity duration-500 hover:scale-105"
               referrerPolicy="no-referrer"
@@ -181,14 +181,14 @@ export default function WebDevelopmentPage() {
                </ul>
             </motion.div>
             <motion.div {...fadeInUp} className="glass-edge rounded-2xl overflow-hidden p-6 bg-surface-container flex justify-center items-center">
-               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2564&auto=format&fit=crop" alt="Data Screen" className="rounded-xl w-full h-[400px] object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Data Screen" className="rounded-xl w-full h-[400px] object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" referrerPolicy="no-referrer" />
             </motion.div>
          </div>
 
          {/* Block 2 */}
          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInUp} className="order-2 md:order-1 glass-edge rounded-2xl overflow-hidden bg-surface-container p-6">
-               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2564&auto=format&fit=crop" alt="Corporate Architecture" className="w-full h-[450px] object-cover rounded-xl filter grayscale contrast-125" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Corporate Architecture" className="w-full h-[450px] object-cover rounded-xl filter grayscale contrast-125" referrerPolicy="no-referrer" />
             </motion.div>
             <motion.div {...fadeInUp} className="order-1 md:order-2">
                <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-on-surface uppercase leading-tight">
@@ -231,7 +231,7 @@ export default function WebDevelopmentPage() {
                </ul>
             </motion.div>
             <motion.div {...fadeInUp} className="glass-edge rounded-2xl overflow-hidden p-6 bg-surface-container flex items-center justify-center">
-               <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=2564&auto=format&fit=crop" alt="Handshake" className="rounded-xl w-full h-[400px] object-cover grayscale opacity-90" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1200&auto=format&fit=crop" alt="Handshake" className="rounded-xl w-full h-[400px] object-cover grayscale opacity-90" referrerPolicy="no-referrer" />
             </motion.div>
          </div>
       </section>

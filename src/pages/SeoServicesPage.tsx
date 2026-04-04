@@ -54,7 +54,7 @@ export default function SeoServicesPage() {
         </motion.div>
         <motion.div {...fadeInUp} className="relative glass-edge rounded-2xl overflow-hidden p-8 bg-surface-container/50 hover:bg-surface-container transition-colors flex justify-center items-center">
            <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
               alt="SEO Analytics" 
               className="w-full max-w-[500px] h-[400px] object-cover rounded-xl filter contrast-125 saturate-50 hover:saturate-100 transition-all duration-700"
               referrerPolicy="no-referrer"
@@ -66,7 +66,7 @@ export default function SeoServicesPage() {
       <section className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32 pt-16 border-t border-outline-variant/10">
         <motion.div {...fadeInUp} className="order-2 md:order-1 relative overflow-hidden rounded-2xl h-[500px] bg-surface-container flex items-center justify-center p-8">
            <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" 
               alt="Professional Strategy" 
               className="w-full h-full object-cover grayscale opacity-90 rounded-xl"
               referrerPolicy="no-referrer"
@@ -121,14 +121,14 @@ export default function SeoServicesPage() {
                <p className="text-xs text-on-surface/40 italic">We strictly adhere to indexing frameworks mandated by global search authorities.</p>
             </motion.div>
             <motion.div {...fadeInUp} className="glass-edge rounded-2xl overflow-hidden p-6 bg-surface-container-low flex justify-center h-[350px]">
-               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2564&auto=format&fit=crop" alt="Technical Data" className="rounded-xl w-full object-cover filter contrast-125 saturate-50" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Technical Data" className="rounded-xl w-full object-cover filter contrast-125 saturate-50" referrerPolicy="no-referrer" />
             </motion.div>
          </div>
 
          {/* SEO Audit Service */}
          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInUp} className="order-2 md:order-1 glass-edge rounded-2xl overflow-hidden bg-surface-container-low p-6 h-[350px]">
-               <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2564&auto=format&fit=crop" alt="Audit Tools" className="w-full h-full object-cover rounded-xl filter grayscale" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop" alt="Audit Tools" className="w-full h-full object-cover rounded-xl filter grayscale" referrerPolicy="no-referrer" />
             </motion.div>
             <motion.div {...fadeInUp} className="order-1 md:order-2">
                <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-on-surface uppercase">
@@ -167,7 +167,7 @@ export default function SeoServicesPage() {
                </ul>
             </motion.div>
             <motion.div {...fadeInUp} className="glass-edge rounded-2xl overflow-hidden p-6 bg-surface-container-low flex justify-center h-[350px]">
-               <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2564&auto=format&fit=crop" alt="Local Map" className="rounded-xl w-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+               <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop" alt="Local Map" className="rounded-xl w-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
             </motion.div>
          </div>
 

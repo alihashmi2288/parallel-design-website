@@ -54,7 +54,7 @@ export default function AppDevelopmentPage() {
         <motion.div {...fadeInUp} className="relative glass-edge rounded-2xl overflow-hidden p-8 bg-surface-container/50 hover:bg-surface-container transition-colors flex justify-center items-center">
            {/* Placeholder for floating phones. A standard app placeholder image works here. */}
            <img 
-              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop" 
               alt="Mobile App Development" 
               className="w-full max-w-[500px] h-[400px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal"
               referrerPolicy="no-referrer"
@@ -66,7 +66,7 @@ export default function AppDevelopmentPage() {
       <section className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-32 bg-surface-container-low p-12 rounded-3xl glass-edge">
         <motion.div {...fadeInUp} className="order-2 md:order-1 relative overflow-hidden rounded-2xl h-[500px]">
            <img 
-              src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1200&auto=format&fit=crop" 
               alt="Developer Working" 
               className="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity duration-500 hover:scale-105"
               referrerPolicy="no-referrer"

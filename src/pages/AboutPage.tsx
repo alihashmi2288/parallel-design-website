@@ -33,7 +33,7 @@ export default function AboutPage() {
             className="aspect-[4/5] rounded-2xl overflow-hidden glass-edge"
           >
             <img 
-              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2564&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop" 
               alt="Tech Aesthetic" 
               className="w-full h-full object-cover grayscale opacity-60"
               referrerPolicy="no-referrer"
@@ -89,10 +89,10 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {[
-            { name: "S. Ali Hashmi", role: "Principal Architect", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2564&auto=format&fit=crop" },
-            { name: "Elena Vance", role: "Creative Director", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2564&auto=format&fit=crop" },
-            { name: "Marcus Thorne", role: "Lead Engineer", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2564&auto=format&fit=crop" },
-            { name: "Sofia Chen", role: "Motion Designer", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop" }
+            { name: "S. Ali Hashmi", role: "Principal Architect", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop" },
+            { name: "Elena Vance", role: "Creative Director", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" },
+            { name: "Marcus Thorne", role: "Lead Engineer", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" },
+            { name: "Sofia Chen", role: "Motion Designer", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop" }
           ].map((member, i) => (
             <motion.div
               key={member.name}
