@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, Code, Layout, Smartphone, Globe, PenTool, Database } from 'lucide-react';
+import { ChevronDown, Code, Layout, Smartphone, Globe, Search, ShoppingCart, Image, PenTool, Shirt, FileText } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 export default function Navbar() {
@@ -18,19 +18,23 @@ export default function Navbar() {
   ];
 
   const services = [
-    { name: 'Web Development', icon: Code, desc: 'High-performance React applications.' },
-    { name: 'UI/UX Design', icon: Layout, desc: 'Premium editorial designs.' },
-    { name: 'Mobile Apps', icon: Smartphone, desc: 'Native iOS and Android solutions.' },
-    { name: 'SEO Optimization', icon: Globe, desc: 'Data-driven ranking strategies.' },
-    { name: 'Brand Identity', icon: PenTool, desc: 'Logos and visual systems.' },
-    { name: 'Data Architecture', icon: Database, desc: 'Secure backend infrastructure.' },
+    { name: 'Website Development', icon: Code, desc: 'High-performance web apps.' },
+    { name: 'App Design', icon: Layout, desc: 'Premium editorial designs.' },
+    { name: 'App Development', icon: Smartphone, desc: 'Native mobile app solutions.' },
+    { name: 'Digital Marketing', icon: Globe, desc: 'Data-driven growth strategies.' },
+    { name: 'SEO', icon: Search, desc: 'Search engine optimization.' },
+    { name: 'E-commerce', icon: ShoppingCart, desc: 'High-converting storefronts.' },
+    { name: 'Illustration', icon: Image, desc: 'Bespoke digital artwork.' },
+    { name: 'Logo Design', icon: PenTool, desc: 'Timeless visual brand identities.' },
+    { name: 'Merchandise Design', icon: Shirt, desc: 'Physical brand manifestations.' },
+    { name: 'Copywriting', icon: FileText, desc: 'Compelling brand narratives.' },
   ];
 
   const getServiceRoute = (name: string) => {
     switch(name) {
-      case 'Web Development': return '/services/web-development';
-      case 'Mobile Apps': return '/services/mobile-apps';
-      case 'SEO Optimization': return '/services/seo-optimization';
+      case 'Website Development': return '/services/website-development';
+      case 'App Design': return '/services/app-design';
+      case 'App Development': return '/services/app-development';
       default: return `/services#${name.toLowerCase().replace(/[\s/]+/g, '-')}`;
     }
   };
@@ -91,14 +95,15 @@ export default function Navbar() {
                       <NavLink 
                         key={idx} 
                         to={getServiceRoute(service.name)}
-                        className="flex items-start gap-4 p-3 rounded-xl hover:bg-surface-container transition-all duration-300 ease-out group/item focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-surface-container-low"
+                        className="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container transition-all duration-300 ease-out group/item focus-visible:outline-none hover:shadow-[0_4px_24px_rgba(var(--primary-rgb),0.05)] hover:-translate-y-0.5 relative overflow-hidden"
                       >
-                       <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary group-hover/item:text-secondary group-hover/item:scale-110 transition-all border border-outline-variant/20">
-                          <service.icon size={20} />
+                       <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                       <div className="relative z-10 w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-on-surface/60 group-hover/item:text-primary group-hover/item:bg-primary/10 group-hover/item:scale-110 transition-all duration-300 border border-outline-variant/20 shadow-sm">
+                          <service.icon size={20} className="transition-transform group-hover/item:rotate-[-5deg]" />
                        </div>
-                       <div>
-                         <h4 className="text-sm font-bold text-on-surface mb-1">{service.name}</h4>
-                         <p className="text-xs text-on-surface/50 font-body normal-case tracking-normal">{service.desc}</p>
+                       <div className="relative z-10">
+                         <h4 className="text-sm font-bold text-on-surface mb-1 group-hover/item:text-primary transition-colors duration-300">{service.name}</h4>
+                         <p className="text-xs text-on-surface/50 font-body normal-case tracking-normal group-hover/item:text-on-surface/70 transition-colors duration-300">{service.desc}</p>
                        </div>
                       </NavLink>
                     ))}

@@ -1,42 +1,66 @@
 import { motion } from 'motion/react';
-import { Palette, Layout, Code, ShieldCheck, Globe, Terminal, Brush, Zap } from 'lucide-react';
+import { Code, Layout, Smartphone, Globe, Search, ShoppingCart, Image, PenTool, Shirt, FileText } from 'lucide-react';
 
 const services = [
   {
-    icon: Palette,
-    title: "Brand Architecture",
-    description: "We don't just design logos; we build digital identities that command authority. From typography to color theory, we ensure your brand's voice is heard in the digital space.",
-    features: ["Visual Identity Systems", "Brand Guidelines", "Typography & Color Theory", "Digital Strategy"]
+    icon: Code,
+    title: "Website Development",
+    description: "Seamless technical execution powered by modern frameworks. We build robust, scalable, and performant web applications that stand the test of time.",
+    features: ["React & Next.js", "Custom CMS Integration", "Performance Setup", "Scalable Architecture"]
   },
   {
     icon: Layout,
-    title: "UI/UX Atelier",
-    description: "Crafting high-contrast editorial layouts that prioritize visual authority. We focus on the user journey, ensuring every interaction is meaningful and every pixel is placed with intent.",
+    title: "App Design",
+    description: "Crafting high-contrast editorial layouts that prioritize visual authority. We focus on the user journey, ensuring every interaction is meaningful.",
     features: ["User Experience Design", "Interface Prototyping", "Editorial Layouts", "High-Contrast Visuals"]
   },
   {
-    icon: Code,
-    title: "Web Engineering",
-    description: "Seamless technical execution powered by the latest modern frameworks. We build robust, scalable, and performant web applications that stand the test of time.",
-    features: ["React & Next.js Development", "Custom CMS Integration", "Performance Optimization", "Scalable Architecture"]
-  },
-  {
-    icon: ShieldCheck,
-    title: "Post-Launch Support",
-    description: "White-glove maintenance for high-traffic digital environments. We provide ongoing support to ensure your digital legacy remains secure, up-to-date, and performant.",
-    features: ["24/7 Monitoring", "Security Updates", "Performance Audits", "Continuous Improvement"]
+    icon: Smartphone,
+    title: "App Development",
+    description: "Native and cross-platform mobile solutions built for speed and engagement. Your brand in the palm of your users' hands.",
+    features: ["iOS & Android SDKs", "React Native", "Real-time Sync", "App Store Optimization"]
   },
   {
     icon: Globe,
-    title: "Spatial UI",
-    description: "Exploring the boundaries of digital space through 3D and spatial design. We create immersive experiences that transcend the traditional 2D web.",
-    features: ["3D Web Experiences", "Spatial Layouts", "Immersive Interactions", "WebGL & Three.js"]
+    title: "Digital Marketing",
+    description: "Results-driven campaigns that conquer the digital landscape. We use data to drive decisions and maximize your return on investment.",
+    features: ["Campaign Strategy", "Performance Ads", "Analytics & Tracking", "Social Media Growth"]
   },
   {
-    icon: Zap,
-    title: "Motion Identity",
-    description: "Bringing your brand to life through intentional motion. We use animation to guide the user's attention and reinforce your brand's personality.",
-    features: ["Micro-interactions", "Scroll-triggered Animations", "Dynamic Transitions", "Brand Motion Systems"]
+    icon: Search,
+    title: "SEO",
+    description: "Data-driven ranking strategies built to dominate search results. We optimize technical infrastructure and content for maximum visibility.",
+    features: ["Technical SEO Audits", "Keyword Dominance", "On-Page Optimization", "Link Building Strategy"]
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-commerce",
+    description: "High-converting online storefronts optimized for sales and performance. We build digital retail experiences that turn visitors into loyal customers.",
+    features: ["Headless Commerce", "Payment Integrations", "Inventory Syncing", "Conversion Optimization"]
+  },
+  {
+    icon: Image,
+    title: "Illustration",
+    description: "Bespoke digital artwork and graphics that tell your brand's unique story. From subtle iconography to complex visual narratives.",
+    features: ["Custom Artwork", "Iconography Systems", "Digital Painting", "Vector Art"]
+  },
+  {
+    icon: PenTool,
+    title: "Logo Design",
+    description: "We don't just design logos; we build timeless visual brand identities from typography to color theory that command authority.",
+    features: ["Visual Identity Systems", "Brand Guidelines", "Typography Selection", "Logo Marks & Types"]
+  },
+  {
+    icon: Shirt,
+    title: "Merchandise Design",
+    description: "Physical manifestations of your brand. We design apparel and accessories that your audience will actually want to wear and use.",
+    features: ["Apparel Graphics", "Packaging Design", "Promo Materials", "Print-Ready Files"]
+  },
+  {
+    icon: FileText,
+    title: "Copywriting",
+    description: "Compelling brand narratives that resonate with your target audience. We craft messaging that converts interest into action.",
+    features: ["Brand Voice Creation", "Website Copy", "Ad Campaigns", "Technical Writing"]
   }
 ];
 

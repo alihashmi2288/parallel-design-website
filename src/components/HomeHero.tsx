@@ -15,20 +15,14 @@ export default function HomeHero() {
   const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacityBackground = useTransform(scrollYProgress, [0, 1], [0.4, 0]);
 
-  const [isDesktop, setIsDesktop] = useState(false);
   const [shouldLoadSpline, setShouldLoadSpline] = useState(false);
   const [splineLoaded, setSplineLoaded] = useState(false);
   
   useEffect(() => {
-    const checkViewport = () => setIsDesktop(window.innerWidth >= 1024);
-    checkViewport();
-    window.addEventListener('resize', checkViewport);
-    
     // Defer the heavy WebGL fetching specifically until after initial paint to protect LCP metrics
     const timer = setTimeout(() => setShouldLoadSpline(true), 250);
 
     return () => {
-      window.removeEventListener('resize', checkViewport);
       clearTimeout(timer);
     };
   }, []);
@@ -105,18 +99,18 @@ export default function HomeHero() {
             initial={{ opacity: 0, scale: 0.8, rotateX: 10, y: 50 }}
             animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
-            className="relative hidden lg:block perspective-[1000px]"
+            className="relative perspective-[1000px]"
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden glass-edge shadow-2xl transition-transform duration-700 hover:rotate-y-12 h-[600px] w-full bg-surface-container/20">
+            <div className="relative z-10 rounded-2xl overflow-hidden glass-edge shadow-2xl transition-transform duration-700 hover:rotate-y-12 h-[400px] lg:h-[600px] w-full bg-surface-container/20">
               
               {/* Maintain spinning loader until WebGL engine has fully parsed and rasterized the 3D geometry */}
-              {(!splineLoaded && isDesktop) && (
+              {!splineLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-surface-container/30 rounded-2xl backrop-blur-sm border border-primary/10 z-20 transition-opacity duration-500">
                   <div className="w-16 h-16 rounded-full border-b-2 border-primary animate-spin" />
                 </div>
               )}
 
-              {(isDesktop && shouldLoadSpline) && (
+              {shouldLoadSpline && (
                 <Suspense fallback={null}>
                   <div 
                     className="absolute inset-x-0 top-0 -bottom-16 transition-opacity duration-1000 ease-out"
